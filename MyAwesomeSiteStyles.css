@@ -82,6 +82,14 @@ button.cta{
     padding: 20px 30px;
     border-radius: 10px;
     text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a.cta:active,
+button.cta:active{
+    opacity:0.7;
 }
 
 a.cta.alt,
@@ -97,6 +105,7 @@ nav {
     box-shadow: 0 5px 8px rgba(0,0,0,.2);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav .logo{
@@ -148,11 +157,12 @@ nav ul li a{
 
 .more-info p{
     margin: 18px; 0 35px;
+    font-size: 30px;
 }
 
 p{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     margin: 30px 0;
 }
 
@@ -165,10 +175,115 @@ p{
     font-weight:800;
 }
 
+.sep {
+    width: 470px;
+    height: 10px;
+    background-color: #111111;
+    margin: 70px auto;
+}
+
+.story h3{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.nb-list{
+    width:470px;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    background-color: #EDEDED;
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+}
+
+.nb-list li{
+    height: 70px;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    box-sizing: border-box;
+}
+.nb-list li.red{background-color: red;}
+.nb-list li.gray{background-color: rgba(0,0,0,.1);}
+.nb-list li.orange{background-color: orange;}
+.nb-list li.yellow{
+    background-color: yellow;
+    color: #111111;
+}
+.nb-list li.green{background-color: green;}
+.nb-list li.blue{background-color: blue;}
+.nb-list li.purple{background-color: purple;}
+
+.nb-list li.dragging{
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    right: -30px;
+    transform:rotate(6deg);
+    box-shadow: 0 2px 14px rgba(0,0,0,.3);
+}
+
+.nb-list li.dragging:after{
+    content: '';
+    display:block;
+    position: absolute;
+    width: 1280px;
+    height: 931px;
+    background: url(images/hand.png) no-repeat 0 0;
+    background-size: 12.5%;
+    top: 30px;
+    bottom: 0;
+    left: 60%;
+}
+
+.drawing1{
+    display:block;
+    margin:0 auto;
+}
+
+.drawing2{
+    display: block;
+    margin:0 0 0 auto;
+}
+
+footer{
+    text-align:center;
+    color: rgba(0,0,0,.4);
+    font-size: 20px;
+    margin: 85px 0 45px;
+    font-weight: bold;
+}
+
+footer a{
+    color: rgba(0,0,0,.4);
+}
+
+.popup {
+    display: none;
+}
+
 /*
- <div class="more-info" id="more-info">
-         <h2>Sign up for cool stuff</h2>  
-        <p>Sign up in order to receive <span class="highlight">a monthly magazine containing my drawings</span> (and the occasional memes). You can view them on this site, but it'd be cool to have a hard copy, right?</p>
-        <button class="cta">Sign up</button>
+ <div class="sep"></div>
+    <div class="story" id="story">
+        <ul class="nb-list">
+            <li class="red">Video games</li>
+            <li class="gray">&nbsp;</li>
+            <li class="orange dragging">Drawing</li>
+            <li class="yellow">Reading</li>
+            <li class="green">Piano</li>
+            <li class="blue">Maths</li>
+            <li class="purple">Spicy memes</li>
+        </ul>
+        <h3>Left: Some things I like Below: My story</h3>
+        <p>I've always loved video games, especially Nintendo ones. I particularly enjoy the characters and there is just a certain charm and likability to the characters of the games that I play.</p>
+        <p>So one day, I picked up a pencil and sketchbook, and started drawing my inkling from Splatoon 2. It wasn't the best drawing, but it was a start to an amazing journey down the artistic path.</p>
+        <p>Drawing, one of my many hobbies, is fun and theraputic, and it allows me to express myself through the things I draw. While the characters I draw are not necessarily of my own creation, but I can add my own twist and make my drawings more personal.</p>
     </div>
+    <div class="sep"></div>
+    <img src="images/drawing1.jpg" width="378" height="504" alt="Drawing1"/>
 */
