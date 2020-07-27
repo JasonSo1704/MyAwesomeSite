@@ -265,25 +265,128 @@ footer a{
 
 .popup {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.popup.show{
+    display:block;
+}
+
+.popup .blanket{
+    background-color: rgba(0,0,0,.7);
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    left: 0;
+}
+
+.popup .content{
+    box-sizing: border-box;
+    padding: 30px 40px;
+    width: 960px;
+    height: 540px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    margin-left: -480px;
+    left: 50%;
+    top:50%;
+    margin-top:-250px;
+}
+
+.popup h2{
+    margin: 10px 0 20px;
+}
+
+.popup .cta{
+    margin-top:40px;
+}
+
+.popup .close{
+    width: 80px;
+    height: 80px;
+    background: #111111 url(images/x.png) no-repeat center center;
+    background-size: 50%;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-indent: -999px;
+    cursor: pointer;
+}
+
+.popup .row{
+    
+}
+
+.popup .row:after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+.popup .item{
+    float: left;
+    width: 415px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.popup .item:first-child{
+    margin-left: 0;
+}
+
+.popup .item label{
+    display: block;
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popup .item input[type="text"]{
+    display: block;
+    font-size:30px;
+    font-weight:bold;
+    border: 4px solid #111111;
+    height: 70px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
 }
 
 /*
- <div class="sep"></div>
-    <div class="story" id="story">
-        <ul class="nb-list">
-            <li class="red">Video games</li>
-            <li class="gray">&nbsp;</li>
-            <li class="orange dragging">Drawing</li>
-            <li class="yellow">Reading</li>
-            <li class="green">Piano</li>
-            <li class="blue">Maths</li>
-            <li class="purple">Spicy memes</li>
-        </ul>
-        <h3>Left: Some things I like Below: My story</h3>
-        <p>I've always loved video games, especially Nintendo ones. I particularly enjoy the characters and there is just a certain charm and likability to the characters of the games that I play.</p>
-        <p>So one day, I picked up a pencil and sketchbook, and started drawing my inkling from Splatoon 2. It wasn't the best drawing, but it was a start to an amazing journey down the artistic path.</p>
-        <p>Drawing, one of my many hobbies, is fun and theraputic, and it allows me to express myself through the things I draw. While the characters I draw are not necessarily of my own creation, but I can add my own twist and make my drawings more personal.</p>
+ <div class="popup">
+        <div class="blanket"></div>
+        <div class="content">
+            <h2>Fill in your details</h2>
+            <form action="">
+                <div class="item">
+                    <label for="">First Name</label>
+                <input type="text" placeholder="Joe" value="Zoe">
+                </div>
+                <div class="item">
+                    <label for="">Last Name</label>
+                <input type="text" placeholder="Cool">
+                </div>
+                <div class="item">
+                    <label for="">Email Address</label>
+                <input type="text" placeholder="josephcool@gmail.com">
+                </div>
+                <div class="item">
+                    <label for="">Home Address</label>
+                <input type="text">
+                </div>
+            </form>
+            <button class="close">Close</button>
+        </div>
     </div>
-    <div class="sep"></div>
-    <img src="images/drawing1.jpg" width="378" height="504" alt="Drawing1"/>
 */
